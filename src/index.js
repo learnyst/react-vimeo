@@ -103,7 +103,6 @@ class Vimeo extends React.Component {
             if (typeof start === 'number') {
               loaded.then(() => {
                 player.setCurrentTime(start);
-                 player.play();
               });
             }
           } else {
@@ -139,7 +138,7 @@ class Vimeo extends React.Component {
     this.player.ready().then(() => {
       if (onReady) {
         onReady(this.player);
-//         if(autoplay) this.player.play();
+        this.player.play();
       }
     }, (err) => {
       if (onError) {
