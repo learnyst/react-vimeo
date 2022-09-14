@@ -154,7 +154,7 @@ class Vimeo extends React.Component {
     if (typeof volume === 'number') {
       this.updateProps(['volume']);
     }
-    if(autoplay) player.play();
+    if(autoplay) this.player.play();
   }
 
   /**
