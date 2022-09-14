@@ -138,6 +138,7 @@ class Vimeo extends React.Component {
     this.player.ready().then(() => {
       if (onReady) {
         onReady(this.player);
+        if(autoplay) this.player.play();
       }
     }, (err) => {
       if (onError) {
@@ -154,7 +155,7 @@ class Vimeo extends React.Component {
     if (typeof volume === 'number') {
       this.updateProps(['volume']);
     }
-    if(autoplay) this.player.play();
+
   }
 
   /**
