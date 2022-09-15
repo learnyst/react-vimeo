@@ -138,7 +138,6 @@ class Vimeo extends React.Component {
     this.player.ready().then(() => {
       if (onReady) {
         onReady(this.player);
-        this.player.play();
       }
     }, (err) => {
       if (onError) {
